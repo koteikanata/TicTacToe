@@ -1,5 +1,6 @@
 import java.util.*;
 
+
 class Main {
     private static Scanner scanner = new Scanner(System.in);
     private static StringBuilder[] field;
@@ -14,10 +15,14 @@ class Main {
 
     static StringBuilder[] createField() {
         StringBuilder[] field = new StringBuilder[5];
+
         for (int i = 0; i < field.length; i++) {
             field[i] = new StringBuilder();
-            field[i].append("---------");
+            field[i].append("--_-_-_--");
+
         }
+        field[0].replace(0, 9, "---------");
+        field[4].replace(0, 9, "---------");
 
         for (int i = 1; i < 4; i++) {
             field[i].setCharAt(0, '|');
@@ -42,11 +47,62 @@ class Main {
     }
 
     private static void findWinner(String input) {
-        System.out.println("X wins");
-        System.out.println("O wins");
+        // horizontal
+        if (input.charAt(0) == input.charAt(1) && input.charAt(1) == input.charAt(2)) {
+            if (input.charAt(0) == 'X') {
+                System.out.println("X wins");
+            } else System.out.println("O wins");
+        } else if (input.charAt(3) == input.charAt(4) && input.charAt(4) == input.charAt(5)) {
+            if (input.charAt(3) == 'X') {
+                System.out.println("X wins");
+            } else System.out.println("O wins");
+        } else if (input.charAt(6) == input.charAt(7) && input.charAt(7) == input.charAt(8)) {
+            if (input.charAt(6) == 'X') {
+                System.out.println("X wins");
+            } else System.out.println("O wins");
+            return;
+        }
+        // verticals
+        else if (input.charAt(0) == input.charAt(3) && input.charAt(3) == input.charAt(6)) {
+            if (input.charAt(0) == 'X') {
+                System.out.println("X wins");
+            } else System.out.println("O wins");
+        } else if (input.charAt(1) == input.charAt(4) && input.charAt(4) == input.charAt(7)) {
+            if (input.charAt(1) == 'X') {
+                System.out.println("X wins");
+            } else System.out.println("O wins");
+        } else if (input.charAt(2) == input.charAt(5) && input.charAt(5) == input.charAt(8)) {
+            if (input.charAt(2) == 'X') {
+                System.out.println("X wins");
+            } else System.out.println("O wins");
+            return;
+        }
+
+        // diagonals
+        else if ((input.charAt(0) == input.charAt(4) && input.charAt(4) == input.charAt(8)) ||
+                (input.charAt(2) == input.charAt(4) && input.charAt(4) == input.charAt(6))) {
+            if (input.charAt(4) == 'X') {
+                System.out.println("X wins");
+            } else {
+                System.out.println("O wins");
+            }
+            return;
+        }
+
+        // game not finished
+        for (int i = 0; i < input.length(); i++) {
+            if (input.charAt(i) == ' ') {
+                System.out.println("Game not finished");
+                return;
+            }
+        }
+
+        // draw
         System.out.println("Draw");
-        System.out.println("Game not finished");
-        System.out.println("Impossible");
+        
+        // impossible
+
+
     }
 
 }
