@@ -106,7 +106,7 @@ public class Main {
     // игра не закончена, пока чек возвращает true
     private static boolean checkGameNotFinished(String input) {
         // return true пока в строке есть пробелы и findWinner возвращает true
-        if (!input.contains(" ") && !findWinner(String.valueOf(inputWithGrid))) {
+        if (input.contains(" ") && !findWinner(String.valueOf(inputWithGrid))) {
             return false;
         } else if (!input.contains(" ") && findWinner(String.valueOf(inputWithGrid))) {
             resultOfGame = " Draw";
