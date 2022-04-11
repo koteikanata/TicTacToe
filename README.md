@@ -1,5 +1,56 @@
 # TicTacToe
 
+you can play in tic-tac-toe with your friend. you need input a coordinates in fromat: "x y"
+## example of game:
+```
+--------- 
+|       |
+|       |
+|       |
+--------- 
+Enter the coordinates: 1 
+You should enter numbers!
+Enter the coordinates: 1 1
+--------- 
+| X     |
+|       |
+|       |
+--------- 
+Enter the coordinates: 1 2
+--------- 
+| X O   |
+|       |
+|       |
+--------- 
+Enter the coordinates: 1 2
+This cell is occupied! Choose another one!
+Enter the coordinates: 2 2
+--------- 
+| X O   |
+|   X   |
+|       |
+--------- 
+Enter the coordinates: 2 3
+--------- 
+| X O   |
+|   X O |
+|       |
+--------- 
+Enter the coordinates: 3 
+You should enter numbers!
+Enter the coordinates: 3 3
+--------- 
+| X O   |
+|   X O |
+|     X |
+--------- 
+X wins
+
+Process finished with exit code 0
+
+```
+
+
 # Work on project. Stage 1/5: Welcome to the battlefield!
 **Description**
 Tic-tac-toe is known all over the world. Each country may have its own version of the name, sometimes the rules are different, but the essence of the game remains the same. Below are the main rules that may be familiar to you since childhood.
