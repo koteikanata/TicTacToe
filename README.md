@@ -1,4 +1,4 @@
-# TicTacToe
+# Jetbrains Academy: TicTacToe
 
 you can play in tic-tac-toe with your friend. you need input a coordinates in fromat: "x y"
 ## example of game:
